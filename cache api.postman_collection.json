@@ -1,0 +1,137 @@
+{
+	"info": {
+		"_postman_id": "65c8d62b-cefb-4ae7-8822-037aec1e21e8",
+		"name": "cache api",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "get key",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{baseurl}}cache?key=yhm",
+					"host": [
+						"{{baseurl}}cache"
+					],
+					"query": [
+						{
+							"key": "key",
+							"value": "yhm"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get all",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{baseurl}}cache",
+					"host": [
+						"{{baseurl}}cache"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "create or update",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"value\":\"123\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{baseurl}}cache?key=h&value=2342j",
+					"host": [
+						"{{baseurl}}cache"
+					],
+					"query": [
+						{
+							"key": "key",
+							"value": "h"
+						},
+						{
+							"key": "value",
+							"value": "2342j"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "delete cache",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "{{baseurl}}cache?key=yhm",
+					"host": [
+						"{{baseurl}}cache"
+					],
+					"query": [
+						{
+							"key": "key",
+							"value": "yhm"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "delete all cache",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "{{baseurl}}cache",
+					"host": [
+						"{{baseurl}}cache"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "baseurl",
+			"value": "http://localhost:3000/",
+			"type": "string"
+		}
+	]
+}
